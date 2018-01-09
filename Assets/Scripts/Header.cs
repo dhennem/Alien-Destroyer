@@ -14,7 +14,7 @@ public class Header : MonoBehaviour {
 	void Start () {
 	//note that the initial values are retreived from the LevelManager, but updated values are retreived from
 	//their respective classes (Cannon, Ship, Shot)
-		levelDisplay.text = "Level: " + Application.loadedLevel.ToString();
+		levelDisplay.text = "Stage: " + (LevelManager.getCurrentStageIndex()+1).ToString();
 		livesDisplay.text = "Lives: " + LevelManager.getInitialNumberOfLives().ToString();
 		shipsLeftDisplay.text = "Ships Left: " + Ship.shipCount.ToString();
 		shotsLeftDisplay.text = "Shots Left: " + LevelManager.getInitialNumberOfShots().ToString();
