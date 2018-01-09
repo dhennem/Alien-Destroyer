@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LoseMessage.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Header.cs" Line="17" Column="29" />
+      <File FileName="Assets/Scripts/LevelManager.cs" Line="8" Column="44" />
+      <File FileName="Assets/Scripts/LoseMessage.cs" Line="59" Column="23" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

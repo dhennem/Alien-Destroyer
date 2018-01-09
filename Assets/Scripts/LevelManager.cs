@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour {
 	private bool lost;
 	
 	//matrix where the rows represent the preset number of lives and shots respectively for each stage
-	static int[,] levelSettingsA = new int[,] {{4,9}, {3,10}, {3,14}, {2,15}, {2,20}};
+	static int[,] levelSettingsA = new int[,] {{4,19}, {3,10}, {3,14}, {2,15}, {2,20}};
 	//matrix where the rows represent the preset minimum ship speeds, maximum ship speeds, chances of enemy shots, and enemy shot velocities respectively for each stage
 	static float[,] levelSettingsB = new float[,] {{0.75f,1f,0.01f,-6f},{0.85f,1.10f,0.01f,-8f},{1.0f,1.25f,0.0115f,-10f},{1.25f,1.50f,0.0125f,-12f},{1.50f,1.75f,0.015f,-14f},{1.75f,2.0f,0.0175f,-16f}};
 	//lists that represent an unordered collection of ship types (1hit,2hit,3hit) that each stage should spawn in ShipGenerator
@@ -73,10 +73,6 @@ public class LevelManager : MonoBehaviour {
 		Ship.shipCount = 0;
 		Shot.outOfShots = false;
 		Cannon.firstShotFired = false;
-		Ship.row1Alive = true;
-		Ship.row2Alive = true;
-		Ship.row3Alive = true;
-		Ship.lowestRowAlive = "row1";
 		isPaused = false;
 		readyToLoadNewLevel = false;
 		won = false;
@@ -157,7 +153,7 @@ public class LevelManager : MonoBehaviour {
 		if(Ship.shipCount <= 0){
 			won = true;
 			lost = false;
-			pauseGameBeforeLoadingNewLevel(1.5f); //pause game for 1.5 seconds
+			pauseGameBeforeLoadingNewLevel(3f); //pause game for 3 seconds
 		}
 	}
 	public void CheckLives(){

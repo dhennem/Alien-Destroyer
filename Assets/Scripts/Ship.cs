@@ -33,12 +33,7 @@ public class Ship : MonoBehaviour {
 	private float minSpeed; //minSpeed and maxSpeed are retrieved from LevelManager's levelSettings during Start()
 	private float maxSpeed;
 	
-	//keeping track of which rows of ships are not hit
-	static public bool row1Alive = true;
-	static public bool row2Alive = true;
-	static public bool row3Alive = true;
-	//the lowest row ship will always be the one shooting
-	static public string lowestRowAlive = "row1";
+
 	
 	void Awake(){
 		//need to make sure that shipCount is incremented first before the header is displayed
@@ -126,19 +121,7 @@ public class Ship : MonoBehaviour {
 		
 	}
 	
-	/*void DetermineLowestRowAlive(){
-		if(!row1Alive){
-			if(!row2Alive){
-				lowestRowAlive = "row3";
-			}
-			else{
-				lowestRowAlive = "row2";
-			}
-		}
-		else{
-			lowestRowAlive = "row1";
-		}
-	}*/
+	
 	
 	//methods that choose new horizontal boundaries for each ship at random; called during HandleMovement() when there is a change in direction
 	void RandomizeLeftBoundary(){
